@@ -1,0 +1,37 @@
+﻿<!--Final modifyAddressesForAccount call-->
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:api="http://api.cerillion.com/">
+	<soapenv:Header/>
+	<soapenv:Body>
+		<api:modifyAddressesForAccount>
+			<!--Optional:-->
+			<handle>eJxb85aBtbiIQTc5P1cvObUoMycnMz9PL7EgUy8jMyUlNa+ksiC1WM8ZJuORmJeSkxr6u8dr76mJMswMDBUFQN3q+HUHpxYXA8U9U2YaX5qy0ZGvBKyvXIWB1TfMzz+A49SGMyypEWmMDGDA2PLKYcYyGF1Rrs/Ampqnm57EwMLAyMDq4urmE4JgMICYYGmWo/bhYO0VAFWdQzg=</handle>
+			<accountNo>80035673</accountNo>
+			<!--Optional:-->
+			<updateAddress>
+				<!--This will have required address -->
+				<addressLine1>1Corr1</addressLine1>
+				<addressLine2>1region1</addressLine2>
+				<addressProfileUid>1</addressProfileUid>
+				<areaName>1city1</areaName>
+				<countryName>Spain</countryName>
+				<dpid>-1</dpid>
+				<externalAddressUid>-1</externalAddressUid>
+				<organizationName/>
+				<pcode>0</pcode>
+				<placeName>1billc1</placeName>
+				<postCode>654321</postCode>`
+				<streetName>1streetc1</streetName>
+				<streetNo>11</streetNo>
+			</updateAddress>
+			<!--Zero or more repetitions:-->
+			<targetAddresses>
+				<!--Zero or more repetitions:-->
+				<addressTypes>SCBCORADDR</addressTypes>
+				<!--Constant for correspondence -->
+				<addressUid>66914</addressUid>
+				<!-- billing addressUID if correspondence address uid is null, or else the correspondence addressUID from getAccountDetails API-->
+			</targetAddresses>
+		</api:modifyAddressesForAccount>
+	</soapenv:Body>
+</soapenv:Envelope>
