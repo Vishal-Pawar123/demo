@@ -31,21 +31,21 @@ namespace HotelListing.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetCountries()
-        {
-            try
-            {
-                var countries = await _unitOfWork.Countries.GetAll(null,null,new List<string> { "Hotels" });
-                var result = _mapper.Map<IList<CountryDTO>>(countries);
-                return Ok(result);
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError($"Something Went Wrong in the {nameof(GetCountries)}");
-                return StatusCode(500,"Internal Server Error, Please try After Sometime");
-            }
-        }
+        //[HttpGet]
+        //public async Task<IActionResult> GetCountries()
+        //{
+        //    try
+        //    {
+        //        var countries = await _unitOfWork.Countries.GetAll(null,null,new List<string> { "Hotels" });
+        //        var result = _mapper.Map<IList<CountryDTO>>(countries);
+        //        return Ok(result);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        _logger.LogError($"Something Went Wrong in the {nameof(GetCountries)}");
+        //        return StatusCode(500,"Internal Server Error, Please try After Sometime");
+        //    }
+        //}
 
         [HttpGet("{id:int}")]
         public async Task<IActionResult> GetCountry(int id)
